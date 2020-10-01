@@ -8,7 +8,7 @@
 <body>
 
 
-<h1>MON PREMIER SITE</h1>
+<h1>MON PREMIER SITEhrety</h1>
     <!-- la balise br nous permettra de passer à la ligne -->
     <?php
     echo "Bienvenue sur mon site <br>
@@ -63,6 +63,8 @@ $a = 4;
 $b = 10;
 echo $a + $b
 ?>
+
+
 
 
 </body>
