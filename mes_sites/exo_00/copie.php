@@ -90,7 +90,7 @@ echo $a + $b
 
 
 
-// mettre toujours echo avant la fonction pour avoir l'affichage
+// mettre toujors echo avant la fonction pour avoir l'affichage
 // sizeof($fruits);
 // is_array($fruits);
 // end();
@@ -173,48 +173,48 @@ echo"<br>L'année est" .$nlledate["2"];
 //     default
 // }
 
-// $phrase="je vous aime";
-// echo("Notre phrase est:".$phrase);
-// echo"<br>";
-// echo("la taille de notre chaine de caractère est:"); echo strlen($phrase);
+$phrase="je vous aime";
+echo("Notre phrase est:".$phrase);
+echo"<br>";
+echo("la taille de notre chaine de caractère est:"); echo strlen($phrase);
 
-// $i=1;
-// $car;
-// while( $i<=strlen($phrase)){
-//    $car=substr($phrase,$i-1,1); 
-//    if($car!=" "){
-//    echo"<br>Le caractère à la position ".$i. " est " .strtoupper($car);
-// }
-//     $i++;
-// }
+$i=1;
+$car;
+while( $i<=strlen($phrase)){
+   $car=substr($phrase,$i-1,1); 
+   if($car!=" "){
+   echo"<br>Le caractère à la position ".$i. " est " .strtoupper($car);
+}
+    $i++;
+}
 
 ?>
 
 <h3>la condition do while</h3>
 <?php
-// echo"<br>";
+echo"<br>";
 
-// $phrase="je vous aime";
+$phrase="je vous aime";
 // echo("Notre phrase est:".$phrase);
 // echo"<br>";
 // echo("la taille de notre chaine de caractère est:"); echo strlen($phrase);
 
-// $i=1;
+$i=1;
 // // $car;
-// do{
-//     $car=substr($phrase,$i-1,1);
-//     $i++;
+do{
+    $car=substr($phrase,$i-1,1);
+    $i++;
 
-//    if($car!=" "){
-//    echo"<br>La position" . " ". ($i-1). "est occupée par:" . " " . strtoupper($car);
+   if($car!=" "){
+   echo"<br>La position" . " ". ($i-1). "est occupée par:" . " " . strtoupper($car);
    
 
-// }else
-//     echo"<br>La position" . " ". ($i-1). "est occupée par:" . " un espace vide ";
+}else
+    echo"<br>La position" . " ". ($i-1). "est occupée par:" . " un espace vide ";
 
-// }
+}
 
-// while( $i<=strlen($phrase));
+while( $i<=strlen($phrase));
  
 // correction faite par les autres
 // do{
@@ -296,28 +296,7 @@ fclose($id)
 $id = fopen(nomfichier,mode)
 fread($id,longueur) -->
 <?php
-// $id=fopen("copie.php","r");
-// if($id){
-// rewind ($id);
-// while(!feof($id)){
-//     $ligne = fgets($id);
-//     echo $ligne;
-// }fclose($id);
-// }else{
-//     echo "impossible d'ouvrir le fichier";
-// }
-
-// afficher la date
-// echo date("d/m/y");
-// echo date("lj FY");
-SETLOCALE(`LC_TIME`,`FR`);
-echo strftime("%A %d %B %Y");
 ?>
-
-<h3><strong>Les formulaires</strong></h3>
-$_GET
-$_POST
-
 </body>
 </html>
     
