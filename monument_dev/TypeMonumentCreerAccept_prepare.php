@@ -2,14 +2,14 @@
 
 	require_once("connexion.php");
 	session_start();
-	$libelle = strtoupper($_POST['libelle']);
-	echo $libelle
-	if (empty($libelle)) {
-		$_SESSION['msg_erreur_saisie'] = "Vous devez saisir une valeur";
-		header("location: frmTypeMonumentCreer.php");
-	}
+	$libelle = trim(strtoupper($_POST['libelle']));
+	// echo $libelle
+	// if (empty($libelle)) {
+	// 	$_SESSION['msg_erreur_saisie'] = "Vous devez saisir une valeur";
+	// 	header("location: frmTypeMonumentCreer.php");
+	// }
 	
-	$libelle = $_POST['libelle'];
+	// $libelle = $_POST['libelle'];
 	
 	// sécurisation des données
 	$vLibelle = filter_var($libelle, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
