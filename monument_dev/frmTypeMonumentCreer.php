@@ -11,9 +11,10 @@
 <fieldset >
 <legend>Type Monument</legend>  
     <div class="form" > <strong> Creer </strong>
-    <form action="">
-    <input type="text"> <br>
-    <button>valider</button>
+    <form action="TypeMonumentCreerAccept.php" method="post">
+    <label for="libelle" ></label>
+    <input type="text" name="libelle"><br>
+    <button type="submit">valider</button>
     </form>
     </div>
     </fieldset>
