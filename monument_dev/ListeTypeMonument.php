@@ -21,7 +21,9 @@
             <tr>
                 <td><?php echo $ligne['Libelle_TYPE_Monument'];?></td>
                 <td> 
-                    <a href="">voir</a> <a href="">Modifier</a> <a href="">Suprimer</a>
+                <a href="typemonumentvoir.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument'] ?>">Voir</a>
+                 <a href= "typemonumentchercher.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>" >Modifier</a> 
+                 <a href="typemonumentsupprimer.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument'] ?>">Supprimer</a>
 
                 </td>            
             </tr>           

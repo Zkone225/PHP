@@ -8,11 +8,12 @@
     
     // recuperation du type monument
     $typemonument = typemonument_find($id);
-    
+
+    // on passe $typemonument en variable de session
     $_SESSION['typemonument'] = $typemonument;
 
     
-    header("location: frmTypeMonumentModifier.php");
+    header("location: frmTypeMonumentVoir.php");
 
 	
 	
