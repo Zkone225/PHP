@@ -18,7 +18,7 @@
 				PDO::ATTR_PERSISTENT => true, // Connexions persistantes
 			);
 			$connexion = new PDO($pdo_connect_bd, $pdo_username, $pdo_password, $pdo_extra_params); // instancie la connexion
-			//echo ("<br>Connexion réussie !<br>");
+			/* echo ("<br>Connexion réussie !<br>"); */
 		}
 		catch(PDOException $e) {
 			$message_erreur = "ERREUR PDO dans " . $e->getFile() . " <br>Ligne " . $e->getLine() . " : " . $e->getMessage() . "<br>";

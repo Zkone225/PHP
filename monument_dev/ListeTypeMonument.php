@@ -42,3 +42,6 @@
 
 
 </html>
+
+session_start();
+		$listeTypemonument = $_SESSION['listeTypemonument'];

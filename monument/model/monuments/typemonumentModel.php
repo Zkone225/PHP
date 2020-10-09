@@ -93,9 +93,7 @@ function typeMonument_find($id){
                                                    //FONCTON DE MODIFIER
 
   function typeMonument_Update($id, $libelle){
-	 
-	  $vTypeMonumentId = $id;
-
+   
 	// sécurisation des données
 	$vLibelle = filter_var($libelle, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 

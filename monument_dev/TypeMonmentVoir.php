@@ -1,6 +1,5 @@
 <?php
 
-
 	require_once("ChercherTypeMonument.php");
 	session_start();
 // recuperation de l'id de type de monument à chercher

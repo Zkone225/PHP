@@ -28,9 +28,7 @@
       
     <tr>
       <td><?php echo $ligne['Libelle_TYPE_Monument'];?></td>
-      <td><a href="../../controllers/typemonument/TypeMonumentVoirAccept.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">Voir</a> 
-      <a href="../../controllers/typemonument/TypeMonumentModifierChercher.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">modifier</a> 
-      <a href="../../controllers/typemonument/TypeMonumentSupprimerChercher.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">supprimer</a></td>
+      <td><a href="../../controller/formTypeMonumentVoir.php?id=<?php echo $ligne['ID_TYPE_Monument']?>">Voir</a> <a href="TypeMonumentChercher.php?id=<?php echo $ligne['ID_TYPE_Monument']?>">modifier</a> <a href="TypeMonumentSupprimer.php?id=<?php echo $ligne['ID_TYPE_Monument']?>">supprimer</a></td>
       
     </tr>
     <?php
