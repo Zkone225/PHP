@@ -1,6 +1,6 @@
 <?php
 
-	require_once("../../model/typemonument/typemonumentModel.php");
+	require_once("../../model/monument/monumentModel.php");
 	  session_start();
 
 	 
@@ -11,6 +11,6 @@
 	
 	typeMonument_Insert($libelle);
 	
-		Header("Location: ../../views/typemonument/ListerTypeMonument.php");
+		Header("Location: ../../views/monument/ListerMonument.php");
 	
 ?>

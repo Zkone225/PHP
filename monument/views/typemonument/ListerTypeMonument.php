@@ -11,10 +11,15 @@
     ?>
     <title>Liste des types monuments</title>
 </head>
-<body style = "margin: 200px;">
+<body style = "margin: 100px;">
 
-<h1 class ="text-center">Liste des types monument</h1>
-<table class= "table" border="1px" style = "text-align:center">
+<a href = "../../administration.php">
+<button type="submit">HOME</button>
+</a>
+<hr>
+
+<h1 class ="text-center">Liste des types monuments</h1>
+<table class= "table" border="10px" style = "text-align:center">
   <thead class="thead-dark">
  
     <tr>
@@ -28,9 +33,11 @@
       
     <tr>
       <td><?php echo $ligne['Libelle_TYPE_Monument'];?></td>
-      <td><a href="../../controllers/typemonument/TypeMonumentVoirAccept.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">Voir</a> 
+      <td>
+      <a href="../../controllers/typemonument/TypeMonumentVoirAccept.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">Voir</a> 
       <a href="../../controllers/typemonument/TypeMonumentModifierChercher.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">modifier</a> 
-      <a href="../../controllers/typemonument/TypeMonumentSupprimerChercher.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">supprimer</a></td>
+      <a href="../../controllers/typemonument/TypeMonumentSupprimerChercher.php?idtypemonument=<?php echo $ligne['ID_TYPE_Monument']?>">supprimer</a>
+      </td>
       
     </tr>
     <?php
@@ -43,10 +50,9 @@
 <hr>
 
 <a href = "formTypeMonumentCreer.php">
-
 <button type="submit">Ajouter Libellé</button>
 </a>
-
+<br>
 
     
 </body>

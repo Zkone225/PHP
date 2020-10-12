@@ -7,24 +7,23 @@
     
     <title>Document</title>
 </head>
-<body>
+<body style= "text-align:center; margin-top:100px;">
 
 <!-- cellui qui va administrer le site avec un loging -->
 
-<a href = "controller/typemonument/TypeMonumentListerAccept.php">
-
-<button type="submit">Type Monument</button>
+<a href = "views/typemonument/ListerTypeMonument.php">
+<button type="submit">Types Monuments</button>
 </a>
-<a href = controller/typemonument/LigneMetroAccept.php">
 
+<a href = "views/lignemetro/ListerLigneMetro.php">
 <button type="submit">Ligne Metro</button>
 </a>
-<a href = controller/typemonument/StationAccept.php">
 
-<button type="submit">Station</button>
+<a href = "views/stations/ListerStation.php" >
+<button type="submit">Stations</button>
 </a>
-<a href = controller/typemonument/MonumentAccept.php">
 
+<a href =  "views/monuments/ListerMonument.php">
 <button type="submit">Monuments</button>
 </a>
 
