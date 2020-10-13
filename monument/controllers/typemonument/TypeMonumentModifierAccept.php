@@ -1,21 +1,28 @@
 <?php
 
-	require_once("../../model/typemonument/typemonumentModel.php");
-	  
-
-    session_start();
-
-    //récupération de l'id de type monument à chercher
-    $id = $_POST['idTypeMonument'];
-    $libelle = trim(ucfirst($_POST['libelle']));
-   
-  
-    //Mise à jours
-    typeMonument_Update($id, $libelle);
-  
+	require_once("../../models/typemonument/typeMonumentModel.php");
+	session_start();
 	
-    Header("Location: ../../controllers/typemonument/TypeMonumentListerAccept.php");
-   
-    
-    
+	$libelle = trim(ucfirst($_POST['libelle']));
+	$idTypemonument = $_POST['idTypemonument'];
+	
+	$_SESSION['libelle'] = $libelle;
+	$_SESSION['msg_erreur'] = "";
+	
+	//controle si libelle est vide
+	if ( !empty($libelle) ) {
+		
+		typeMonument_Update($idTypemonument, $libelle);
+		
+		if ( $_SESSION['msg_erreur'] == "") {
+			Header("Location: ../../controllers/typemonument/TypeMonumentListerAccept.php")	;				
+		} else {
+			Header("Location: ../../views/typemonument/frmTypeMonumentModifier.php")	;		
+		}
+	} else {
+		$_SESSION['msg_erreur'] = "Libellé non renseigné";
+		Header("Location: ../../views/typemonument/frmTypeMonumentModifier.php")	;		
+	} 
+	
+	
 ?>

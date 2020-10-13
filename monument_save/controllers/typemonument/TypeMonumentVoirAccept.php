@@ -12,5 +12,5 @@
 	//on passe $typemonument en variable de session 
 	$_SESSION['typemonument'] = $typemonument;
 
-	Header("Location: ../../views/typemonument/formTypeMonumentVoir.php");
+	Header("Location: ../../views/typemonument/frmTypeMonumentVoir.php");
 	?>
