@@ -27,13 +27,13 @@
 
 </head>
 <body>
-
+<div style="text-align:center;margin-top:200px" >
 	<p>
 		<a href="controllers/typemonument/TypeMonumentListerAccept.php"><button>Type monument</button></a>
 	</p>
 	<p>
 		<a href="controllers/monument/MonumentListerAccept.php"><button>Monument</button></a>
 	</p>
-	
+</div>
 </body>
 </html>

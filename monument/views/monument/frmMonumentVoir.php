@@ -45,9 +45,27 @@
 			</div>
 			<br><br>
 			<div class="w3-container" >
+
 				<label>Nom Monument</label>
-				<input class="w3-input w3-text-blue" type="text" name="monument" value="<?php echo $Monument['monument']; ?>" disabled>
+				<input class="w3-input w3-text-blue" type="text" name="monument" value="<?php echo $Monument['Nom_Monument']; ?>" disabled>
 				<br><br>
+
+				<label>Arrondissement</label>
+				<input class="w3-input w3-text-blue" type="text" name="monument" value="<?php echo $Monument['Arrondissement_Monument']; ?>" disabled>
+				<br><br>
+
+				<label>Adresse</label>
+				<input class="w3-input w3-text-blue" type="text" name="monument" value="<?php echo $Monument['Adresse_Monument']; ?>" disabled>
+				<br><br>
+
+				<label>Site web</label>
+				<input class="w3-input w3-text-blue" type="text" name="monument" value="<?php echo $Monument['Site_Web_Monument']; ?>" disabled>
+				<br><br>
+
+				<label>Date d'insertion</label>
+				<input class="w3-input w3-text-blue" type="text" name="monument" value="<?php echo $Monument['date_creation']; ?>" disabled>
+				<br><br>
+
 			</div>	
 			<footer class="w3-brown w3-padding-large w3-right-align">
 				<a href="../../controllers/monument/MonumentListerAccept.php" ><button class="w3-btn w3-aqua w3-round-large w3-hover-green w3-medium"><i class="fa fa-hand-o-left" ></i>&nbsp;&nbsp;Retour </button></a>

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../../css/main.css" />
 	<?php
 		session_start();
-		require_once("../../models/typemonument/typeMonumentModel.php");
+		require_once("../../models/monument/MonumentModel.php");
 		$listeTypeMonument = typeMonument_findAll();
 		$optChoisi = "selected";
 		if ( isset($_SESSION['msg_erreur']) ) {
