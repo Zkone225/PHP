@@ -26,39 +26,22 @@
     <link rel="stylesheet" href="../../css/main.css" />
 	<?php
 		session_start();
-		require_once("../../models/typemonument/typeMonumentModel.php");
-		$listeTypeMonument = typeMonument_findAll();
-		$optChoisi = "selected";
+		
 		if ( isset($_SESSION['msg_erreur']) ) {
 			if ($_SESSION['msg_erreur'] == "") {
-				$nomMonument = "";
-				$arrMonument = "";
-				$adrMonument = "";
-				$siteMonument = "";
-				$dateCreation = "";
-				$idTypeMonument = "";
+				$libelle = "";
 			} else {
-				$nomMonument = $_SESSION['nomMonument'];
-				$arrMonument = $_SESSION['arrMonument'];
-				$adrMonument = $_SESSION['adrMonument'];
-				$siteMonument = $_SESSION['siteMonument'];
-				$dateCreation = $_SESSION['dateCreation'];
-				$idTypeMonument = $_SESSION['idTypeMonument'];
+				$libelle = $_SESSION['libelle'];
 			}
 		} else {
-			$nomMonument = "";
-			$arrMonument = "";
-			$adrMonument = "";
-			$siteMonument = "";
-			$dateCreation = "";
-			$idTypeMonument = "";
+			$libelle = "";
 			$_SESSION['msg_erreur'] = "";
 		}
 	?>
 </head>
 <body>
 	<div class="w3-container w3-black">
-		<h1>MONUMENT</h1>
+		<h1 >TYPE MONUMENT</h1>
 	</div>
 	<br>
 	
@@ -68,51 +51,26 @@
 		</div>
 		<div class="w3-half w3-light-grey w3-border w3-card-4">
 			<div class="w3-container w3-blue">
-				<h2>Création d'un monument </h2>
+				<h2>Création d'un type monument </h2>
 			</div>
 			<br><br>
-			<form class="w3-container" action="../../controllers/monument/MonumentCreerAccept.php" method="post">
+			<form class="w3-container" action="../../controllers/typemonument/TypeMonumentCreerAccept.php" method="post">
 				<p class="w3-text-red"><?php echo $_SESSION['msg_erreur'];?> </p>
 				<br>
-				<label>Nom</label>
-				<input class="w3-input w3-text-blue" type="text" name="nomMonument" value="<?php echo $nomMonument; ?>" autofocus>
-				<label>Arrondissement</label>
-				<input class="w3-input w3-text-blue" type="text" name="arrMonument" value="<?php echo $arrMonument; ?>" >
-				<label>Adresse</label>
-				<input class="w3-input w3-text-blue" type="text" name="adrMonument" value="<?php echo $adrMonument; ?>" >
-				<label>Site web</label>
-				<input class="w3-input w3-text-blue" type="text" name="siteMonument" value="<?php echo $siteMonument; ?>" >
-				<label>Date création</label>
-				<input class="w3-input w3-text-blue" type="date" name="dateCreation" value="<?php echo $dateCreation; ?>" >
-				<label>Type monument</label>
-				<select class="w3-select w3-text-black" name="idTypeMonument">
-					<option value="0" >Selectionner un type monument</option>
-					<?php 
-						foreach ( $listeTypeMonument as $typeMonument ){	
-					?>					
-					<option name="idTypeMonumentOption" value="<?php echo $typeMonument['ID_TYPE_Monument']; ?>"
-							<?php
-								if ( $typeMonument['ID_TYPE_Monument'] == $idTypeMonument ) {
-									echo $optChoisi;
-								}
-							?>>
-							<?php echo $typeMonument['Libelle_TYPE_Monument']; ?>
-					</option>
-					<?php 
-						}
-					?>		
-				</select>
+				<label>Libellé</label>
+				<input class="w3-input w3-text-blue" type="text" name="libelle" value="<?php echo $libelle; ?>" autofocus>
 				<br><br>
 				<button type="submit" class="w3-btn w3-teal w3-round-large w3-hover-green w3-medium"><i class="fa fa-check" ></i>&nbsp;&nbsp; Enregistrer</button>
 				<br><br>
 			</form>	
 			<footer class="w3-brown w3-padding-large w3-right-align">
-				<a href="../../controllers/monument/MonumentListerAccept.php" ><button class="w3-btn w3-aqua w3-round-large w3-hover-green w3-medium"><i class="fa fa-hand-o-left" ></i>&nbsp;&nbsp;Retour </button></a>
+				<a href="../../controllers/typemonument/TypeMonumentListerAccept.php" ><button class="w3-btn w3-aqua w3-round-large w3-hover-green w3-medium"><i class="fa fa-hand-o-left" ></i>&nbsp;&nbsp;Retour </button></a>
 			</footer>				
 		</div>
 		<div class="w3-quarter w3-container">
 		&nbsp;
 		</div>
 	</div> 		
+
 </body>
 </html>
