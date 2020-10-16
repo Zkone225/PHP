@@ -24,16 +24,30 @@
 
 	<!--Fichier CSS de la page-->
 	<link rel="stylesheet" href="/css/main.css" />
+	<?php
+		session_start();
+		if ( isset($_SESSION['user_ok']) ) {
+			if ($_SESSION['user_ok']['type_utilisateur'] != "ADM") {
+				header("Location: views/utilisateur/frmLogin.php");				
+			} 	
+		} else {
+			header("Location: views/utilisateur/frmLogin.php");
+		}
+		
+	?>
 
 </head>
 <body>
-<div style="text-align:center;margin-top:200px" >
+
 	<p>
 		<a href="controllers/typemonument/TypeMonumentListerAccept.php"><button>Type monument</button></a>
 	</p>
 	<p>
 		<a href="controllers/monument/MonumentListerAccept.php"><button>Monument</button></a>
 	</p>
-</div>
+	<p>
+		<a href="controllers/utilisateur/UtilisateurListerAccept.php"><button>Utilisateur</button></a>
+	</p>
+	
 </body>
 </html>
