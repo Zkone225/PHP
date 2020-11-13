@@ -90,7 +90,7 @@ echo $a + $b
 
 
 
-// mettre toujors echo avant la fonction pour avoir l'affichage
+// mettre toujours echo avant la fonction pour avoir l'affichage
 // sizeof($fruits);
 // is_array($fruits);
 // end();
